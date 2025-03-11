@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento Rotativo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="splash">
+        <img src="img/logo.png" alt="Logo" class="splash-logo">
+    </div>
+
+     <div class="main-content">
+         <h2>Estacionamento Rotativo</h2>
+         
+         <div id="form-container">
+             <label for="plate">Placa: </label>
+             <input type="text" id="plate" name="plate" placeholder="Digite a placa">
+             <button onclick="validatePlate()">Validar Placa</button>
+             <p id="plate-info"></p>
+             
+             <label for="type">Tipo de Veículo: </label>
+             <select id="type">
+                 <option value="Compacto-2.00">Compacto - R$2,00</option>
+                 <option value="Hatch-2.50">Hatch - R$2,50</option>
+                 <option value="Sedan-2.50">Sedan - R$2,50</option>
+                 <option value="SUV-3.00">SUV - R$3,00</option>
+                 <option value="Pickup-4.00">Pickup - R$4,00</option>
+             </select>
+ 
+             <label>
+                 <input type="checkbox" id="isElectric"> Veículo Elétrico (50% de desconto)
+             </label>
+             
+             <label for="hours">Horas estacionado: </label>
+             <input type="number" id="hours" name="hours" min="1" value="1">
+             
+             <button onclick="calculatePrice()">Calcular</button>
+         </div>
+         
+         <div id="result">
+             <p id="total-price"></p>
+         </div>
+     </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
